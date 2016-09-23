@@ -103,12 +103,12 @@ class PokemonLevelGuesser {
       let (x,y) = (arcX[index], arcY[index])
       if let pixelValue = getPixelValue(x: x, y: y) {
         print("pixelValue", x, y, pixelValue.red, pixelValue.green, pixelValue.blue, estLevel)
-//        if pixelValue.red==255 && pixelValue.green==255 && pixelValue.blue==255 {
-//          return estLevel
-//        }
+        if pixelValue.red>=250 && pixelValue.green>=250 && pixelValue.blue>=250 {
+          return estLevel
+        }
       }
       estLevel -= 0.5
-    } while estLevel >= 1.0
+    } while estLevel > 1.0
     return 1.0
   }
   

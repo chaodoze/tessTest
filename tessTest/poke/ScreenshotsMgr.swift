@@ -27,15 +27,18 @@ struct ScreenshotsMgr {
   static let manager = PHImageManager.default()
   
   static func requestUrlForAsset(_ asset:PHAsset)->String {
-    let options = PHImageRequestOptions()
-    options.isSynchronous = true
-    var result = "unknown"
-    manager.requestImageData(for: asset, options: options, resultHandler: {(imagedata, dataUTI, orientation, info) in
-      if let url = info?["PHImageFileURLKey"] as? URL {
-        result = url.absoluteString
-      }
-    })
-    return result
+//    let options = PHImageRequestOptions()
+//    options.synchronous = true
+//    var result = "unknown"
+//    manager.requestImageDataForAsset(asset, options: options, resultHandler: {(imagedata, dataUTI, orientation, info) in
+//      if let url = info?["PHImageFileURLKey"] as? NSURL {
+//        result = url.absoluteString
+//      }
+//    })
+//    return result
+    let identifier = asset.localIdentifier
+    let url = "ph://\(identifier)"
+    return url
   }
   
   static func requestImageForAsset(_ asset:PHAsset)->UIImage {

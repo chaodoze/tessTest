@@ -24,7 +24,7 @@ extension UIImage {
     print("image info", cgImage?.alphaInfo.rawValue, cgImage?.bitmapInfo.rawValue)
     let numberOfComponents = 4
     let pixelData = ((Int(size.width) * y) + x) * numberOfComponents
-    return (red:Int(data[pixelData+1]), green:Int(data[pixelData+2]), blue:Int(data[pixelData+3]))
+    return (red:Int(data[pixelData]), green:Int(data[pixelData+1]), blue:Int(data[pixelData+2]))
     //
     //        let r = CGFloat(data[pixelData]) / 255.0
     //        let g = CGFloat(data[pixelData + 1]) / 255.0

@@ -41,6 +41,7 @@
 		2832A46A08CCE0729A59089E /* Pods_tessTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tessTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7E58968B466AA1CE55A5F4 /* Pods_tessTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tessTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C061A5FCDAF779E4A8CA356C /* Pods-tessTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tessTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tessTest/Pods-tessTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E52684141D95E9C9002B4176 /* tessTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tessTest.entitlements; sourceTree = "<group>"; };
 		E59C7D701D76097C00419870 /* tessTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tessTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59C7D731D76097C00419870 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E59C7D751D76097C00419870 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		E59C7D721D76097C00419870 /* tessTest */ = {
 			isa = PBXGroup;
 			children = (
+				E52684141D95E9C9002B4176 /* tessTest.entitlements */,
 				E50991F91D872FBA00115F41 /* poke */,
 				E59C7D731D76097C00419870 /* AppDelegate.swift */,
 				E59C7D7A1D76097C00419870 /* Assets.xcassets */,
@@ -221,6 +223,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8JVQ9YPMP4;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					E59C7D831D76097C00419870 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -501,6 +508,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = tessTest/tessTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
@@ -531,6 +539,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = tessTest/tessTest.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
